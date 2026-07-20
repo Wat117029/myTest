@@ -1,0 +1,10 @@
+1) Header(HD)BlockからDataGroup(DG)Blockがファイル内のどこに存在するか確認する。
+2) DataGroup(DG)BlockからChannelGroup(CG)Blockがファイル内のどこに存在するか確認する。
+3) DataGroup(DG)BlockからDataレコードがファイル内のどこに存在するか確認する。
+4) ChannelGroup(CG)BlockからChannel(CN)Blockがファイル内のどこに存在するか確認する。
+5) ChannelGroup(CG)BlockからDataレコードのレコード数、サイズを確認する。
+6) Channel(CN)BlockからDataレコードの定義を確認する。
+7) Dataレコードを定義に従って取り込む。
+
+
+※今回Dataレコードの定義は固定なため、4) 6)は実施しない。
