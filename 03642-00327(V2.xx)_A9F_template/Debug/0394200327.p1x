@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Project ID="{530429AC-71ED-4B01-B9C9-D3AF3BEE4617}" FileName="0394200327.p1x">
+	<FileFormat>008D</FileFormat>
+	<GUIVersion>2025.1.2.6475</GUIVersion>
+	<ProgrammableHW PartNumber="11130958" Description="MC050-155/15B-0_lg ver:70097969v190 (SYS:70097979v190)" Comment="MC050_155_lg" HwdName="70097969" HwdVersion="1.90.0">
+		<SystemFile FileName="70097979v190.sys" Parameters="W1:DISABLE" IgnoreSystemFile="UseDebugSys">
+			<APIDocument FileName="70097979.pdf"/>
+		</SystemFile>
+		<Application Name="0394200327">
+			<PID Description="A9F" Version="2.00" Type="A9F"/>
+			<ToolKey Parameters="LOGKEY:TB_A6E" Configuration=""/>
+			<MainModule ModuleName="MAINTASK" FileName="MAINMODULE.scs"/>
+			<Library FileName="Key_make_MC050_155v100.zip"/>
+			<TextDefinition FileName="TEXTDATA.tds" ModuleName="TEXTDATA"/>
+			<FontDefinition FileName="FONTDATA.fds"/>
+			<PortData FileName="PORTS.XML"/>
+			<PLCopenXML FileName="C code entry points.xml"/>
+			<CCodeFile FileName="ma_gbl.c"/>
+			<CCodeFile FileName="ma_gbl.h" IsAvailableToPlc="true"/>
+			<CCodeFile FileName="ma_proc.c"/>
+			<CCodeFile FileName="ma_proc.h" IsAvailableToPlc="true"/>
+			<Parameters FileName="ProjectParameters.json"/>
+		</Application>
+		<Output>
+			<Hexfile FileName="0394200327.lhx" FileSize="" FileTime=""/>
+			<OutputTargetPartNumber></OutputTargetPartNumber>
+			<OutputTargetSerialNumber></OutputTargetSerialNumber>
+		</Output>
+		<TargetPartNumber></TargetPartNumber>
+	</ProgrammableHW>
+</Project>

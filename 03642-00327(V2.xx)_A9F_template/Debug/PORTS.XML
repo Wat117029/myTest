@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Ports>
+  <FileFormat>001B</FileFormat>
+  <HWPort>
+    <Name>FlashDrive</Name>
+    <AF>Eng_DTC</AF>
+    <AF>Error_log1</AF>
+    <AF>Log_Info</AF>
+    <AF>Machine_Infomation</AF>
+  </HWPort>
+</Ports>

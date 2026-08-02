@@ -1,0 +1,308 @@
+<?xml version="1.0"?>
+<TextDataSource DefLang="1" OrgLang="1">
+  <FileFormat>002A</FileFormat>
+  <Folder Name="Info">
+    <Text>
+      <ID>203</ID>
+      <Description>Hourmeter changed by Servicetool</Description>
+      <Used_by/>
+      <String LanguageIndex="1" CodePage="1252" TextData="Hourmeter changed by Servicetool"/>
+    </Text>
+    <Text>
+      <ID>205</ID>
+      <Description>Syncronize engine ECU's hourmeter</Description>
+      <Used_by/>
+      <String LanguageIndex="1" CodePage="1252" TextData="Syncronize engine ECU's hourmeter"/>
+    </Text>
+    <Text>
+      <ID>206</ID>
+      <Description>Hourmeter changed by Factory mode</Description>
+      <Used_by/>
+      <String LanguageIndex="1" CodePage="1252" TextData="Hourmeter changed by Factory mode"/>
+    </Text>
+    <Text>
+      <ID>207</ID>
+      <Description>Pre Hourmeter</Description>
+      <Used_by/>
+      <String LanguageIndex="1" CodePage="1252" TextData="Previous Hourmeter"/>
+    </Text>
+    <Text>
+      <ID>204</ID>
+      <Description>Hm</Description>
+      <Used_by/>
+      <String LanguageIndex="1" CodePage="1252" TextData="%10lu.%02uHours"/>
+    </Text>
+  </Folder>
+  <Folder Name="Eng_DTC">
+    <Text>
+      <ID>208</ID>
+      <Description>SPN</Description>
+      <Used_by/>
+      <String LanguageIndex="1" CodePage="1252" TextData="SPN:%6d FMI:%2d"/>
+    </Text>
+  </Folder>
+  <Text>
+    <ID>1</ID>
+    <Description>Code</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="Code =%4d"/>
+  </Text>
+  <Text>
+    <ID>2</ID>
+    <Description>Hourmeter</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="HourMeter =%4d.%2dHr"/>
+  </Text>
+  <Text>
+    <ID>17</ID>
+    <Description>Hyd_Temp</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="Hyd.Temp=%5ddegC"/>
+  </Text>
+  <Text>
+    <ID>39</ID>
+    <Description>Error Index</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="Error Index = %2d"/>
+  </Text>
+  <Text>
+    <ID>7</ID>
+    <Description>MIX_Snsr_Volt</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="MIX_Sensor_Volt =%5dmV"/>
+  </Text>
+  <Text>
+    <ID>8</ID>
+    <Description>Snsr_Accel_Volt</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="Accel Sensor Volt =%5dmV"/>
+  </Text>
+  <Text>
+    <ID>10</ID>
+    <Description>Fuel_Ohm</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="Fuel Ohm =%5d ohm"/>
+  </Text>
+  <Text>
+    <ID>9</ID>
+    <Description>Snsr_FtAccel_Volt</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="Foot Accel Volt =%5dmV"/>
+  </Text>
+  <Text>
+    <ID>6</ID>
+    <Description>Snsr_Volt</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="Sensor Volt =%5dmV"/>
+  </Text>
+  <Text>
+    <ID>5</ID>
+    <Description>MIX_Supply_Volt</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="MIX_Supply_Volt = %5dmV"/>
+  </Text>
+  <Text>
+    <ID>3</ID>
+    <Description>Supply_V</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="Supply Volt =%5dmV\n"/>
+  </Text>
+  <Text>
+    <ID>4</ID>
+    <Description>MOX_Supply_Volt</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="MOX_Supply_Volt = %5dmV"/>
+  </Text>
+  <Text>
+    <ID>18</ID>
+    <Description>Hyd_Count</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="Hyd_Temp_High=%5dsec"/>
+  </Text>
+  <Text>
+    <ID>21</ID>
+    <Description>Alt_Status</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="Alt_Status = %u"/>
+  </Text>
+  <Text>
+    <ID>22</ID>
+    <Description>Fuel_Ohm</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="Fuel_Ohm = %5u Ohm"/>
+  </Text>
+  <Text>
+    <ID>23</ID>
+    <Description>Water_Separate</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="Water_Separate = %u"/>
+  </Text>
+  <Text>
+    <ID>24</ID>
+    <Description>SW_DPD_Inhibit</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="SW_DPD_Inhibit = %d"/>
+  </Text>
+  <Text>
+    <ID>25</ID>
+    <Description>SW_DPD_Man</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="SW_DPD_Man = %d"/>
+  </Text>
+  <Text>
+    <ID>26</ID>
+    <Description>Accel_Input</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="Accel_Input = %d"/>
+  </Text>
+  <Text>
+    <ID>27</ID>
+    <Description>Drive_Mode</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="Drive_Mode"/>
+  </Text>
+  <Text>
+    <ID>28</ID>
+    <Description>Decel_Auto_In</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="Decel_Auto_In"/>
+  </Text>
+  <Text>
+    <ID>29</ID>
+    <Description>Decel_1T_In</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="Decel_1T_In"/>
+  </Text>
+  <Text>
+    <ID>19</ID>
+    <Description>Snsr_AUX1_mV</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="Input  =%5d mV"/>
+  </Text>
+  <Text>
+    <ID>15</ID>
+    <Description>AUX1R_Actual_Curr</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="AUX1R Actual Current =%5dmA"/>
+  </Text>
+  <Text>
+    <ID>14</ID>
+    <Description>AUX1R_Target_Curr</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="AUX1R Target Current =%5dmA"/>
+  </Text>
+  <Text>
+    <ID>13</ID>
+    <Description>Actual_Curr</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="Actual Current =%5dmA"/>
+  </Text>
+  <Text>
+    <ID>12</ID>
+    <Description>Target_ Curr</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="Target Current =%5dmA"/>
+  </Text>
+  <Text>
+    <ID>11</ID>
+    <Description>Snsr_AUX1_Pct</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="Input  =%4d.%02d %%"/>
+  </Text>
+  <Text>
+    <ID>36</ID>
+    <Description>Snsr_AUX2_mV</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="Input  =%5d mV"/>
+  </Text>
+  <Text>
+    <ID>37</ID>
+    <Description>AUX_2_4_In</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="AUX_2_4_In"/>
+  </Text>
+  <Text>
+    <ID>42</ID>
+    <Description>Snsr_AUX2_Pct</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="Input  =%4d.%02d %%"/>
+  </Text>
+  <Text>
+    <ID>45</ID>
+    <Description>AUX2R_Target_Curr</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="AUX2R Target Current =%5dmA"/>
+  </Text>
+  <Text>
+    <ID>47</ID>
+    <Description>AUX2L_Target_ Curr</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="AUX2L Target Current =%5d mA"/>
+  </Text>
+  <Text>
+    <ID>48</ID>
+    <Description>AUX2L_Actual_Curr</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="AUX2L Actual Current =%5d mA"/>
+  </Text>
+  <Text>
+    <ID>49</ID>
+    <Description>AUX2R_Actual_Curr</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="AUX2R Actual Current =%5dmA"/>
+  </Text>
+  <Text>
+    <ID>40</ID>
+    <Description>Snsr_Lift_kPa</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="Lift Sensor = %5d kPa"/>
+  </Text>
+  <Text>
+    <ID>41</ID>
+    <Description>Snsr_Lift_Volt</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="Lift Sensor = %5d mV"/>
+  </Text>
+  <Text>
+    <ID>43</ID>
+    <Description>Pmp_Actual_Curr</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="Pump Actual Current =%5d mA"/>
+  </Text>
+  <Text>
+    <ID>50</ID>
+    <Description>Pump_Target_Curr</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="Pump Target Current =%5d mA"/>
+  </Text>
+  <Text>
+    <ID>200</ID>
+    <Description>Eng_SN</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="Engine S/N"/>
+  </Text>
+  <Text>
+    <ID>201</ID>
+    <Description>EECU_SN</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="Engine S/N"/>
+  </Text>
+  <Text>
+    <ID>202</ID>
+    <Description>Eng_Model</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="Engine model"/>
+  </Text>
+  <Text>
+    <ID>199</ID>
+    <Description>Ascii</Description>
+    <Used_by/>
+    <String LanguageIndex="1" CodePage="1252" TextData="%1c%1c%1c%1c%1c%1c%1c%1c%1c%1c%1c%1c%1c%1c%1c%1c%1c%1c%1c%1c"/>
+  </Text>
+  <Language>
+    <Name>English</Name>
+    <Index>1</Index>
+    <Hidden>0</Hidden>
+    <DefaultCodePage>1252</DefaultCodePage>
+  </Language>
+</TextDataSource>

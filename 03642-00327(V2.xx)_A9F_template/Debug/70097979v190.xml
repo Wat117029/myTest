@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SYSFileInXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="M:\shared_ALM_Plus1Tool_Doc\ALM_Plus1Tool_Doc_comp\Docu\Specification\File Format\SYS File XML Data.xsd">
+	<FileFormat Released="false">004D</FileFormat>
+	<Controls>
+		<NeededToolVersion>7.1.10</NeededToolVersion>
+		<ScreenEditorEnable>false</ScreenEditorEnable>
+		<TextEditorEnable>true</TextEditorEnable>
+		<ImageEditorEnable>false</ImageEditorEnable>
+		<UseInstalledFonts>true</UseInstalledFonts>
+		<ApplogScreenEditorEnable>true</ApplogScreenEditorEnable>
+		<DynamicDiagnostics>true</DynamicDiagnostics>
+		<SIL2>false</SIL2>
+		<CompiledBinaryFile>false</CompiledBinaryFile>
+		<ObjectCode>true</ObjectCode>
+		<MicroSeconds>true</MicroSeconds>
+		<CheckHWNR>false</CheckHWNR>
+	</Controls>
+	<SupportedProjectItems>
+		<ToolKey>
+			<Parameter>LOGKEY</Parameter>
+		</ToolKey>
+		<ReadOnlyParameters>
+		</ReadOnlyParameters>
+
+	</SupportedProjectItems>
+	<SupportedPrimitives>
+                <PrimitiveName>U__HWNR2</PrimitiveName>
+                <PrimitiveName>IC_TIME-US</PrimitiveName>
+                <PrimitiveName>U__UNTIL</PrimitiveName>
+                <PrimitiveName>U__REPEAT</PrimitiveName>
+                <PrimitiveName>O__OBJ-CR-CALL1</PrimitiveName>
+                <PrimitiveName>O__OBJ-END1</PrimitiveName>
+                <PrimitiveName>IC_OBJECT-IN1</PrimitiveName>
+                <PrimitiveName>IC_OBJECT-IN-B1</PrimitiveName>
+                <PrimitiveName>IC_OBJECT-OUT1</PrimitiveName>
+                <PrimitiveName>IC_OBJECT-OUT-B1</PrimitiveName>
+                <PrimitiveName>O__CLASS-DEFINE1</PrimitiveName>
+                <PrimitiveName>O__CLASS-END1</PrimitiveName>
+                <PrimitiveName>IC_INIT-OUT</PrimitiveName>
+                <PrimitiveName>MA_ISIN</PrimitiveName>
+                <PrimitiveName>MA_ICOS</PrimitiveName>
+                <PrimitiveName>MA_ITAN</PrimitiveName>
+                <PrimitiveName>MA_ISQRT</PrimitiveName>
+                <PrimitiveName>MA_IASIN</PrimitiveName>
+                <PrimitiveName>MA_IACOS</PrimitiveName>
+                <PrimitiveName>MA_IATAN</PrimitiveName>
+                <PrimitiveName>IC_BIOS-BI-U1</PrimitiveName>
+                <PrimitiveName>IC_BIOS-IN-U1</PrimitiveName>
+                <PrimitiveName>IC_BIOS-SHOW-U1</PrimitiveName>
+                <PrimitiveName>IC_MODULE-IN-U1</PrimitiveName>
+                <PrimitiveName>IC_MOD-BUS-IN1</PrimitiveName>
+                <PrimitiveName>IC_MOD-BUS-OUT</PrimitiveName>
+                <PrimitiveName>IC_PARAM-NS-U</PrimitiveName>
+                <PrimitiveName>IC_PARAM-IN-U1</PrimitiveName>
+                <PrimitiveName>IC_ACC-APP</PrimitiveName>
+                <PrimitiveName>IC_SET-PULSE</PrimitiveName>
+                <PrimitiveName>IC_ACC-APP-RAWD</PrimitiveName>
+                <PrimitiveName>IC_ACC-APP-DIAG</PrimitiveName>
+                <PrimitiveName>IC_ACC-APP-ERR</PrimitiveName>
+                <PrimitiveName>IC_ACC-APP-OTH</PrimitiveName>
+                <PrimitiveName>IC_ACC-HISTORY</PrimitiveName>
+                <PrimitiveName>IC_ACC-READ</PrimitiveName>
+                <PrimitiveName>IC_ACC-WRITE</PrimitiveName>
+                <PrimitiveName>O__XCLASS-CREATE</PrimitiveName>
+                <PrimitiveName>O__XFUNC-CALL</PrimitiveName>
+                <PrimitiveName>IC_CAN-TX</PrimitiveName>
+                <PrimitiveName>IC_CAN-RX</PrimitiveName>
+                <PrimitiveName>IC_CAN-RX-M</PrimitiveName>
+                <PrimitiveName>IC_CAN-RX-A</PrimitiveName>
+                <PrimitiveName>IC_NV-A1</PrimitiveName>
+                <PrimitiveName>IC_NV-B1</PrimitiveName>
+                <PrimitiveName>IC_NV-B2</PrimitiveName>
+                <PrimitiveName>IC_NV-C1</PrimitiveName>
+                <PrimitiveName>IC_NV-IN-U1</PrimitiveName>
+                <PrimitiveName>IC_BIN-FILE</PrimitiveName>
+                <PrimitiveName>IF_ASSIGN_APP</PrimitiveName>
+                <PrimitiveName>IF_TEXTLIST-START_APP</PrimitiveName>
+                <PrimitiveName>IF_TEXTLIST-DATA_APP</PrimitiveName>
+                <PrimitiveName>IF_TEXTLIST-END_APP</PrimitiveName>
+                <PrimitiveName>IF_STRINGF-OUT20_APP</PrimitiveName>
+                <PrimitiveName>IC_TLABEL</PrimitiveName>
+                <PrimitiveName>IC_TLABEL1</PrimitiveName>
+                <PrimitiveName>IC_DEFINE-IN1</PrimitiveName>
+                <PrimitiveName>IF_SELECT-LANG</PrimitiveName>
+                <PrimitiveName>U__PARAM-CLOSE</PrimitiveName>
+                <PrimitiveName>U__HWNR2</PrimitiveName>
+                <PrimitiveName>IC_TIME-US</PrimitiveName>
+                <PrimitiveName>U__UNTIL</PrimitiveName>
+                <PrimitiveName>U__REPEAT</PrimitiveName>
+                <PrimitiveName>O__OBJ-CR-CALL1</PrimitiveName>
+                <PrimitiveName>O__OBJ-END1</PrimitiveName>
+                <PrimitiveName>IC_OBJECT-IN1</PrimitiveName>
+                <PrimitiveName>IC_OBJECT-IN-B1</PrimitiveName>
+                <PrimitiveName>IC_OBJECT-OUT1</PrimitiveName>
+                <PrimitiveName>IC_OBJECT-OUT-B1</PrimitiveName>
+                <PrimitiveName>O__CLASS-DEFINE1</PrimitiveName>
+                <PrimitiveName>O__CLASS-END1</PrimitiveName>
+                <PrimitiveName>IC_INIT-OUT</PrimitiveName>
+                <PrimitiveName>MA_ISIN</PrimitiveName>
+                <PrimitiveName>MA_ICOS</PrimitiveName>
+                <PrimitiveName>MA_ITAN</PrimitiveName>
+                <PrimitiveName>MA_ISQRT</PrimitiveName>
+                <PrimitiveName>MA_IASIN</PrimitiveName>
+                <PrimitiveName>MA_IACOS</PrimitiveName>
+                <PrimitiveName>MA_IATAN</PrimitiveName>
+                <PrimitiveName>IC_BIOS-BI-U1</PrimitiveName>
+                <PrimitiveName>IC_BIOS-IN-U1</PrimitiveName>
+                <PrimitiveName>IC_BIOS-SHOW-U1</PrimitiveName>
+                <PrimitiveName>IC_MODULE-IN-U1</PrimitiveName>
+                <PrimitiveName>IC_MOD-BUS-IN1</PrimitiveName>
+                <PrimitiveName>IC_MOD-BUS-OUT</PrimitiveName>
+                <PrimitiveName>IC_PARAM-NS-U</PrimitiveName>
+                <PrimitiveName>IC_PARAM-IN-U1</PrimitiveName>
+                <PrimitiveName>IC_ACC-APP</PrimitiveName>
+                <PrimitiveName>IC_SET-PULSE</PrimitiveName>
+                <PrimitiveName>IC_ACC-APP-RAWD</PrimitiveName>
+                <PrimitiveName>IC_ACC-APP-DIAG</PrimitiveName>
+                <PrimitiveName>IC_ACC-APP-ERR</PrimitiveName>
+                <PrimitiveName>IC_ACC-APP-OTH</PrimitiveName>
+                <PrimitiveName>IC_ACC-HISTORY</PrimitiveName>
+                <PrimitiveName>IC_ACC-READ</PrimitiveName>
+                <PrimitiveName>IC_ACC-WRITE</PrimitiveName>
+                <PrimitiveName>O__XCLASS-CREATE</PrimitiveName>
+                <PrimitiveName>O__XFUNC-CALL</PrimitiveName>
+                <PrimitiveName>IC_CAN-TX</PrimitiveName>
+                <PrimitiveName>IC_CAN-RX</PrimitiveName>
+                <PrimitiveName>IC_CAN-RX-M</PrimitiveName>
+                <PrimitiveName>IC_CAN-RX-A</PrimitiveName>
+                <PrimitiveName>IC_NV-A1</PrimitiveName>
+                <PrimitiveName>IC_NV-B1</PrimitiveName>
+                <PrimitiveName>IC_NV-B2</PrimitiveName>
+                <PrimitiveName>IC_NV-C1</PrimitiveName>
+                <PrimitiveName>IC_NV-IN-U1</PrimitiveName>
+                <PrimitiveName>IC_BIN-FILE</PrimitiveName>
+                <PrimitiveName>IF_ASSIGN_APP</PrimitiveName>
+                <PrimitiveName>IF_TEXTLIST-START_APP</PrimitiveName>
+                <PrimitiveName>IF_TEXTLIST-DATA_APP</PrimitiveName>
+                <PrimitiveName>IF_TEXTLIST-END_APP</PrimitiveName>
+                <PrimitiveName>IF_STRINGF-OUT20_APP</PrimitiveName>
+                <PrimitiveName>IC_TLABEL</PrimitiveName>
+                <PrimitiveName>IC_TLABEL1</PrimitiveName>
+                <PrimitiveName>IC_DEFINE-IN1</PrimitiveName>
+                <PrimitiveName>IF_SELECT-LANG</PrimitiveName>
+                <PrimitiveName>U__PARAM-CLOSE</PrimitiveName>
+                <PrimitiveName>U__HWNR2</PrimitiveName>
+                <PrimitiveName>IC_TIME-US</PrimitiveName>
+                <PrimitiveName>U__UNTIL</PrimitiveName>
+                <PrimitiveName>U__REPEAT</PrimitiveName>
+                <PrimitiveName>O__OBJ-CR-CALL1</PrimitiveName>
+                <PrimitiveName>O__OBJ-END1</PrimitiveName>
+                <PrimitiveName>IC_OBJECT-IN1</PrimitiveName>
+                <PrimitiveName>IC_OBJECT-IN-B1</PrimitiveName>
+                <PrimitiveName>IC_OBJECT-OUT1</PrimitiveName>
+                <PrimitiveName>IC_OBJECT-OUT-B1</PrimitiveName>
+                <PrimitiveName>O__CLASS-DEFINE1</PrimitiveName>
+                <PrimitiveName>O__CLASS-END1</PrimitiveName>
+                <PrimitiveName>IC_INIT-OUT</PrimitiveName>
+                <PrimitiveName>MA_ISIN</PrimitiveName>
+                <PrimitiveName>MA_ICOS</PrimitiveName>
+                <PrimitiveName>MA_ITAN</PrimitiveName>
+                <PrimitiveName>MA_ISQRT</PrimitiveName>
+                <PrimitiveName>MA_IASIN</PrimitiveName>
+                <PrimitiveName>MA_IACOS</PrimitiveName>
+                <PrimitiveName>MA_IATAN</PrimitiveName>
+                <PrimitiveName>IC_BIOS-BI-U1</PrimitiveName>
+                <PrimitiveName>IC_BIOS-IN-U1</PrimitiveName>
+                <PrimitiveName>IC_BIOS-SHOW-U1</PrimitiveName>
+                <PrimitiveName>IC_MODULE-IN-U1</PrimitiveName>
+                <PrimitiveName>IC_MOD-BUS-IN1</PrimitiveName>
+                <PrimitiveName>IC_MOD-BUS-OUT</PrimitiveName>
+                <PrimitiveName>IC_PARAM-NS-U</PrimitiveName>
+                <PrimitiveName>IC_PARAM-IN-U1</PrimitiveName>
+                <PrimitiveName>IC_ACC-APP</PrimitiveName>
+                <PrimitiveName>IC_SET-PULSE</PrimitiveName>
+                <PrimitiveName>IC_ACC-APP-RAWD</PrimitiveName>
+                <PrimitiveName>IC_ACC-APP-DIAG</PrimitiveName>
+                <PrimitiveName>IC_ACC-APP-ERR</PrimitiveName>
+                <PrimitiveName>IC_ACC-APP-OTH</PrimitiveName>
+                <PrimitiveName>IC_ACC-HISTORY</PrimitiveName>
+                <PrimitiveName>IC_ACC-READ</PrimitiveName>
+                <PrimitiveName>IC_ACC-WRITE</PrimitiveName>
+                <PrimitiveName>O__XCLASS-CREATE</PrimitiveName>
+                <PrimitiveName>O__XFUNC-CALL</PrimitiveName>
+                <PrimitiveName>IC_CAN-TX</PrimitiveName>
+                <PrimitiveName>IC_CAN-RX</PrimitiveName>
+                <PrimitiveName>IC_CAN-RX-M</PrimitiveName>
+                <PrimitiveName>IC_CAN-RX-A</PrimitiveName>
+                <PrimitiveName>IC_NV-A1</PrimitiveName>
+                <PrimitiveName>IC_NV-B1</PrimitiveName>
+                <PrimitiveName>IC_NV-B2</PrimitiveName>
+                <PrimitiveName>IC_NV-C1</PrimitiveName>
+                <PrimitiveName>IC_NV-IN-U1</PrimitiveName>
+                <PrimitiveName>IC_BIN-FILE</PrimitiveName>
+                <PrimitiveName>IF_ASSIGN_APP</PrimitiveName>
+                <PrimitiveName>IF_TEXTLIST-START_APP</PrimitiveName>
+                <PrimitiveName>IF_TEXTLIST-DATA_APP</PrimitiveName>
+                <PrimitiveName>IF_TEXTLIST-END_APP</PrimitiveName>
+                <PrimitiveName>IF_STRINGF-OUT20_APP</PrimitiveName>
+                <PrimitiveName>IC_TLABEL</PrimitiveName>
+                <PrimitiveName>IC_TLABEL1</PrimitiveName>
+                <PrimitiveName>IC_DEFINE-IN1</PrimitiveName>
+                <PrimitiveName>IF_SELECT-LANG</PrimitiveName>
+                <PrimitiveName>U__PARAM-CLOSE</PrimitiveName>
+                <PrimitiveName>U__HWNR2</PrimitiveName>
+                <PrimitiveName>IC_TIME-US</PrimitiveName>
+                <PrimitiveName>U__UNTIL</PrimitiveName>
+                <PrimitiveName>U__REPEAT</PrimitiveName>
+                <PrimitiveName>O__OBJ-CR-CALL1</PrimitiveName>
+                <PrimitiveName>O__OBJ-END1</PrimitiveName>
+                <PrimitiveName>IC_OBJECT-IN1</PrimitiveName>
+                <PrimitiveName>IC_OBJECT-IN-B1</PrimitiveName>
+                <PrimitiveName>IC_OBJECT-OUT1</PrimitiveName>
+                <PrimitiveName>IC_OBJECT-OUT-B1</PrimitiveName>
+                <PrimitiveName>O__CLASS-DEFINE1</PrimitiveName>
+                <PrimitiveName>O__CLASS-END1</PrimitiveName>
+                <PrimitiveName>IC_INIT-OUT</PrimitiveName>
+                <PrimitiveName>MA_ISIN</PrimitiveName>
+                <PrimitiveName>MA_ICOS</PrimitiveName>
+                <PrimitiveName>MA_ITAN</PrimitiveName>
+                <PrimitiveName>MA_ISQRT</PrimitiveName>
+                <PrimitiveName>MA_IASIN</PrimitiveName>
+                <PrimitiveName>MA_IACOS</PrimitiveName>
+                <PrimitiveName>MA_IATAN</PrimitiveName>
+                <PrimitiveName>IC_BIOS-BI-U1</PrimitiveName>
+                <PrimitiveName>IC_BIOS-IN-U1</PrimitiveName>
+                <PrimitiveName>IC_BIOS-SHOW-U1</PrimitiveName>
+                <PrimitiveName>IC_MODULE-IN-U1</PrimitiveName>
+                <PrimitiveName>IC_MOD-BUS-IN1</PrimitiveName>
+                <PrimitiveName>IC_MOD-BUS-OUT</PrimitiveName>
+                <PrimitiveName>IC_PARAM-NS-U</PrimitiveName>
+                <PrimitiveName>IC_PARAM-IN-U1</PrimitiveName>
+                <PrimitiveName>IC_ACC-APP</PrimitiveName>
+                <PrimitiveName>IC_SET-PULSE</PrimitiveName>
+                <PrimitiveName>IC_ACC-APP-RAWD</PrimitiveName>
+                <PrimitiveName>IC_ACC-APP-DIAG</PrimitiveName>
+                <PrimitiveName>IC_ACC-APP-ERR</PrimitiveName>
+                <PrimitiveName>IC_ACC-APP-OTH</PrimitiveName>
+                <PrimitiveName>IC_ACC-HISTORY</PrimitiveName>
+                <PrimitiveName>IC_ACC-READ</PrimitiveName>
+                <PrimitiveName>IC_ACC-WRITE</PrimitiveName>
+                <PrimitiveName>O__XCLASS-CREATE</PrimitiveName>
+                <PrimitiveName>O__XFUNC-CALL</PrimitiveName>
+                <PrimitiveName>IC_CAN-TX</PrimitiveName>
+                <PrimitiveName>IC_CAN-RX</PrimitiveName>
+                <PrimitiveName>IC_CAN-RX-M</PrimitiveName>
+                <PrimitiveName>IC_CAN-RX-A</PrimitiveName>
+                <PrimitiveName>IC_NV-A1</PrimitiveName>
+                <PrimitiveName>IC_NV-B1</PrimitiveName>
+                <PrimitiveName>IC_NV-B2</PrimitiveName>
+                <PrimitiveName>IC_NV-C1</PrimitiveName>
+                <PrimitiveName>IC_NV-IN-U1</PrimitiveName>
+                <PrimitiveName>IC_BIN-FILE</PrimitiveName>
+                <PrimitiveName>IF_ASSIGN_APP</PrimitiveName>
+                <PrimitiveName>IF_TEXTLIST-START_APP</PrimitiveName>
+                <PrimitiveName>IF_TEXTLIST-DATA_APP</PrimitiveName>
+                <PrimitiveName>IF_TEXTLIST-END_APP</PrimitiveName>
+                <PrimitiveName>IF_STRINGF-OUT20_APP</PrimitiveName>
+                <PrimitiveName>IC_TLABEL</PrimitiveName>
+                <PrimitiveName>IC_TLABEL1</PrimitiveName>
+                <PrimitiveName>IC_DEFINE-IN1</PrimitiveName>
+                <PrimitiveName>IF_SELECT-LANG</PrimitiveName>
+                <PrimitiveName>U__PARAM-CLOSE</PrimitiveName>
+                <PrimitiveName>U__HWNR2</PrimitiveName>
+                <PrimitiveName>IC_TIME-US</PrimitiveName>
+                <PrimitiveName>U__UNTIL</PrimitiveName>
+                <PrimitiveName>U__REPEAT</PrimitiveName>
+                <PrimitiveName>O__OBJ-CR-CALL1</PrimitiveName>
+                <PrimitiveName>O__OBJ-END1</PrimitiveName>
+                <PrimitiveName>IC_OBJECT-IN1</PrimitiveName>
+                <PrimitiveName>IC_OBJECT-IN-B1</PrimitiveName>
+                <PrimitiveName>IC_OBJECT-OUT1</PrimitiveName>
+                <PrimitiveName>IC_OBJECT-OUT-B1</PrimitiveName>
+                <PrimitiveName>O__CLASS-DEFINE1</PrimitiveName>
+                <PrimitiveName>O__CLASS-END1</PrimitiveName>
+                <PrimitiveName>IC_INIT-OUT</PrimitiveName>
+                <PrimitiveName>MA_ISIN</PrimitiveName>
+                <PrimitiveName>MA_ICOS</PrimitiveName>
+                <PrimitiveName>MA_ITAN</PrimitiveName>
+                <PrimitiveName>MA_ISQRT</PrimitiveName>
+                <PrimitiveName>MA_IASIN</PrimitiveName>
+                <PrimitiveName>MA_IACOS</PrimitiveName>
+                <PrimitiveName>MA_IATAN</PrimitiveName>
+                <PrimitiveName>IC_BIOS-BI-U1</PrimitiveName>
+                <PrimitiveName>IC_BIOS-IN-U1</PrimitiveName>
+                <PrimitiveName>IC_BIOS-SHOW-U1</PrimitiveName>
+                <PrimitiveName>IC_MODULE-IN-U1</PrimitiveName>
+                <PrimitiveName>IC_MOD-BUS-IN1</PrimitiveName>
+                <PrimitiveName>IC_MOD-BUS-OUT</PrimitiveName>
+                <PrimitiveName>IC_PARAM-NS-U</PrimitiveName>
+                <PrimitiveName>IC_PARAM-IN-U1</PrimitiveName>
+                <PrimitiveName>IC_ACC-APP</PrimitiveName>
+                <PrimitiveName>IC_SET-PULSE</PrimitiveName>
+                <PrimitiveName>IC_ACC-APP-RAWD</PrimitiveName>
+                <PrimitiveName>IC_ACC-APP-DIAG</PrimitiveName>
+                <PrimitiveName>IC_ACC-APP-ERR</PrimitiveName>
+                <PrimitiveName>IC_ACC-APP-OTH</PrimitiveName>
+                <PrimitiveName>IC_ACC-HISTORY</PrimitiveName>
+                <PrimitiveName>IC_ACC-READ</PrimitiveName>
+                <PrimitiveName>IC_ACC-WRITE</PrimitiveName>
+                <PrimitiveName>O__XCLASS-CREATE</PrimitiveName>
+                <PrimitiveName>O__XFUNC-CALL</PrimitiveName>
+                <PrimitiveName>IC_CAN-TX</PrimitiveName>
+                <PrimitiveName>IC_CAN-RX</PrimitiveName>
+                <PrimitiveName>IC_CAN-RX-M</PrimitiveName>
+                <PrimitiveName>IC_CAN-RX-A</PrimitiveName>
+                <PrimitiveName>IC_NV-A1</PrimitiveName>
+                <PrimitiveName>IC_NV-B1</PrimitiveName>
+                <PrimitiveName>IC_NV-B2</PrimitiveName>
+                <PrimitiveName>IC_NV-C1</PrimitiveName>
+                <PrimitiveName>IC_NV-IN-U1</PrimitiveName>
+                <PrimitiveName>IC_BIN-FILE</PrimitiveName>
+                <PrimitiveName>IF_ASSIGN_APP</PrimitiveName>
+                <PrimitiveName>IF_TEXTLIST-START_APP</PrimitiveName>
+                <PrimitiveName>IF_TEXTLIST-DATA_APP</PrimitiveName>
+                <PrimitiveName>IF_TEXTLIST-END_APP</PrimitiveName>
+                <PrimitiveName>IF_STRINGF-OUT20_APP</PrimitiveName>
+                <PrimitiveName>IC_TLABEL</PrimitiveName>
+                <PrimitiveName>IC_TLABEL1</PrimitiveName>
+                <PrimitiveName>IC_DEFINE-IN1</PrimitiveName>
+                <PrimitiveName>IF_SELECT-LANG</PrimitiveName>
+                <PrimitiveName>U__PARAM-CLOSE</PrimitiveName>
+                <PrimitiveName>U__PARAM-OPEN</PrimitiveName>
+
+	</SupportedPrimitives>
+	<NotSupportedPrimitives>
+		<PrimitiveName>IC_MODULE-IN1</PrimitiveName>
+		<PrimitiveName>IC_BIOS-BIDIREC1</PrimitiveName>
+		<PrimitiveName>IC_BIOS-IN1</PrimitiveName>
+		<PrimitiveName>IC_BIOS-SHOW1</PrimitiveName>
+		<PrimitiveName>IC_NV-IN1</PrimitiveName>
+	</NotSupportedPrimitives>
+
+	<SupportedTimeBases>
+		<TimebaseName>T1M</TimebaseName>
+		<TimebaseName>T10M </TimebaseName>
+		<TimebaseName>T100M </TimebaseName>
+		<TimebaseName>T1S </TimebaseName>
+		<TimebaseName>T60S</TimebaseName>
+		<TimebaseName>T1H</TimebaseName>
+		<TimebaseName>TLOOP</TimebaseName>
+	</SupportedTimeBases>
+
+	<SupportedTypes Version="1">
+		<BIT>
+			<Variable Name="BOOL">
+				<Synonyme>BIT</Synonyme>
+			</Variable>
+			<Constant Name="CBOOL">
+				<Synonyme>CBIT</Synonyme>
+			</Constant>
+			<Size>1</Size>
+			<Min>0</Min>
+			<Max>255</Max>
+		</BIT>
+		<UB>
+			<Variable Name="U8">
+				<Synonyme>UB</Synonyme>
+			</Variable>
+			<Constant Name="CU8">
+				<Synonyme>CUB</Synonyme>
+			</Constant>
+			<Size>1</Size>
+			<Min>0</Min>
+			<Max>255</Max>
+		</UB>
+		<UW>
+			<Variable Name="U16">
+				<Synonyme>UW</Synonyme>
+			</Variable>
+			<Constant Name="CU16">
+				<Synonyme>CUW</Synonyme>
+			</Constant>
+			<Size>2</Size>
+			<Min>0</Min>
+			<Max>65535</Max>
+		</UW>
+		<UL>
+			<Variable Name="U32">
+				<Synonyme>UL</Synonyme>
+			</Variable>
+			<Constant Name="CU32">
+				<Synonyme>CUL</Synonyme>
+			</Constant>
+			<Size>4</Size>
+			<Min>0</Min>
+			<Max>4294967295</Max>
+		</UL>
+		<SB>
+			<Variable Name="S8">
+				<Synonyme>SB</Synonyme>
+			</Variable>
+			<Constant Name="CS8">
+				<Synonyme>CSB</Synonyme>
+			</Constant>
+			<Size>1</Size>
+			<Min>-128</Min>
+			<Max>127</Max>
+		</SB>
+		<SW>
+			<Variable Name="S16">
+				<Synonyme>SW</Synonyme>
+			</Variable>
+			<Constant Name="CS16">
+				<Synonyme>CSW</Synonyme>
+			</Constant>
+			<Size>2</Size>
+			<Min>-32768</Min>
+			<Max>32767</Max>
+		</SW>
+		<SL>
+			<Variable Name="S32">
+				<Synonyme>SL</Synonyme>
+			</Variable>
+			<Constant Name="CS32">
+				<Synonyme>CSL</Synonyme>
+			</Constant>
+			<Size>4</Size>
+			<Min>-2147483648</Min>
+			<Max>2147483647</Max>
+		</SL>
+		<T>
+			<Variable Name="T"/>
+			<Constant Name="CT"/>
+			<Size>1</Size>
+			<Min>-1</Min>
+			<Max>-1</Max>
+		</T>
+		<TL>
+			<Variable Name="TL"/>
+			<Constant Name="CTL"/>
+			<Size>-1</Size>
+			<Min>-1</Min>
+			<Max>-1</Max>
+		</TL>
+		<FILE>
+			<Variable Name="FILE"/>
+			<Constant Name="CFILE"/>
+			<Size>-1</Size>
+			<Min>-1</Min>
+			<Max>-1</Max>
+		</FILE>
+		<FONT>
+			<Variable Name="FONT"/>
+			<Constant Name="CFONT"/>
+			<Size>-1</Size>
+			<Min>-1</Min>
+			<Max>-1</Max>
+		</FONT>
+		<PORT>
+			<Variable Name="PORT"/>
+			<Constant Name="CPORT"/>
+			<Size>-1</Size>
+			<Min>-1</Min>
+			<Max>-1</Max>
+		</PORT>
+		<COLOR>
+			<Variable Name="COLOR"/>
+			<Constant Name="CCOLOR"/>
+			<Size>1</Size>
+			<Min>-1</Min>
+			<Max>-1</Max>
+		</COLOR>
+		<PXO>
+			<Variable Name="PXO"/>
+			<Constant Name="CPXO"/>
+			<Size>-1</Size>
+			<Min>-1</Min>
+			<Max>-1</Max>
+		</PXO>
+		<LANG>
+			<Variable Name="LANG"/>
+			<Constant Name="CLANG"/>
+			<Size>-1</Size>
+			<Min>-1</Min>
+			<Max>-1</Max>
+		</LANG>
+	</SupportedTypes>
+	<P1fFont FileName="LCD5x7e_8_255.P1F" FileTime="" FileSize=""/>
+
+<Ports>
+	<DataDrive>
+		<BlockSize>65536</BlockSize>
+		<Size>2097152</Size>
+		<Name>FlashDrive</Name>
+		<HWImplementation>
+			<Applog>
+				<AllocationMode>0</AllocationMode>
+				<MaxNumberOfFiles>0</MaxNumberOfFiles>
+				<Type>
+					<Linear/>
+					<Circular/>
+				</Type>
+				<Defaults>
+					<Name>AppLogFile</Name>
+					<Size>131072</Size>
+					<Type>
+						<Circular/>
+					</Type>
+				</Defaults>
+			</Applog>
+			<BinaryFile>
+				<AllocationMode>0</AllocationMode>
+				<MaxNumberOfFiles>1</MaxNumberOfFiles>
+			</BinaryFile>
+		</HWImplementation>
+	</DataDrive>
+</Ports>
+<Ports>
+	<DataDrive>
+		<BlockSize>16384</BlockSize>
+		<Size>16384</Size>
+		<Name>ROPPort</Name>
+		<HWImplementation>
+			<Parameters>
+				<AllocationMode>0</AllocationMode>
+				<MaxNumberOfFiles>0</MaxNumberOfFiles>
+			</Parameters>
+		</HWImplementation>
+	</DataDrive>
+</Ports>	
+
+<ToolParameters>
+<Name>W1</Name>
+<Description>ReadOnlyParameters</Description>
+<Data>
+<ValueList>
+<Value>DISABLE</Value>
+<Default>true</Default>
+</ValueList>
+<ValueList>
+<Value>ENABLE</Value>
+</ValueList>
+</Data>
+</ToolParameters>
+	<MemoryAllocation>
+		<Mapformat>AG47Q220130614</Mapformat>
+		<AddressUnit>1</AddressUnit>
+		<Available>
+			<ROM>507904</ROM>	
+			<RAM>129536</RAM> 
+			<NV>3500</NV>
+		</Available>
+		<SystemUsed>
+			<ROM>73558</ROM>
+			<RAM>31564</RAM>  
+			<NV>0</NV>
+		</SystemUsed>
+		<MemoryNames>
+			<ROM>
+				<SegmentName>.validApp</SegmentName>
+				<SegmentName>.CRCField</SegmentName>
+				<SegmentName>.text</SegmentName>
+				<SegmentName>.textKrnl</SegmentName>
+				<SegmentName>.rodata</SegmentName>
+				<SegmentName>.isr_vector</SegmentName>
+				<SegmentName>.data</SegmentName>
+				<SegmentName>.krn_ser_flash_diagconst</SegmentName>
+			</ROM>
+			<RAM>
+				<SegmentName>.isr_vector_RAM</SegmentName>
+				<SegmentName>.SharedMemory</SegmentName>
+				<SegmentName>.data</SegmentName>
+				<SegmentName>.bss</SegmentName>
+				<SegmentName>.CommRAMbss</SegmentName>
+				<SegmentName>.AppLayerbss</SegmentName>
+				<SegmentName>.krn_ser_flash_text</SegmentName>
+
+
+			</RAM>
+			<NV>
+				<VectorName>EE</VectorName>
+			</NV>
+		</MemoryNames>
+
+	</MemoryAllocation>
+	<CompilerSettings>
+		<Keyword>ADDRESSMODE</Keyword>
+		<Data>LSBFIRST</Data>
+	</CompilerSettings>
+	<CompilerSettings>
+		<Keyword>MIN_DATASIZE</Keyword>
+		<Data>8</Data>
+	</CompilerSettings>
+
+<SYSSocket Type="dualbootSTM32FX0X474_MC050_155" Name="W2" Description="Dual Boot" Open="true"/>
+
+<FunctionLibrary Type="CCP_STM32FX0X474" Open="true" />
+
+</SYSFileInXML>

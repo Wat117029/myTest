@@ -1,0 +1,854 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.plcopen.org/xml/tc6_0201">
+  <fileHeader companyName="Danfoss" productName="PLUS+1 GUIDE" productVersion="12.2.9.1696" creationDateTime="2019-12-22T16:48:25"/>
+  <contentHeader name="" modificationDateTime="2021-03-19T09:38:49">
+    <coordinateInfo>
+      <fbd>
+        <scaling x="1" y="1"/>
+      </fbd>
+      <ld>
+        <scaling x="1" y="1"/>
+      </ld>
+      <sfc>
+        <scaling x="1" y="1"/>
+      </sfc>
+    </coordinateInfo>
+    <addData>
+      <data name="FileFormat" handleUnknown="discard">
+        <FileFormat>001C</FileFormat>
+      </data>
+    </addData>
+  </contentHeader>
+  <types>
+    <dataTypes/>
+    <pous>
+      <pou name="MA_FUNC" pouType="function">
+        <interface>
+          <returnType>
+            <DINT/>
+          </returnType>
+          <inputVars>
+            <variable name="DM14_Recv_Data">
+              <type>
+                <array>
+                  <dimension lower="0" upper="7"/>
+                  <baseType>
+                    <BYTE/>
+                  </baseType>
+                </array>
+              </type>
+            </variable>
+            <variable name="DM14_Recv_Update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="DM16_Recv_Data">
+              <type>
+                <array>
+                  <dimension lower="0" upper="7"/>
+                  <baseType>
+                    <BYTE/>
+                  </baseType>
+                </array>
+              </type>
+            </variable>
+            <variable name="DM16_Recv_Update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="DM16_Recv_Data_Multi">
+              <type>
+                <array>
+                  <dimension lower="0" upper="99"/>
+                  <baseType>
+                    <BYTE/>
+                  </baseType>
+                </array>
+              </type>
+            </variable>
+            <variable name="DM16_Recv_Update_Multi">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="DM16_Send_Busy">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="MA_Loop_Cnt">
+              <type>
+                <UDINT/>
+              </type>
+            </variable>
+            <variable name="MA_Exce_Time">
+              <type>
+                <UINT/>
+              </type>
+            </variable>
+            <variable name="MA_Cnf_Data">
+              <type>
+                <UDINT/>
+              </type>
+            </variable>
+            <variable name="MA_Key_C">
+              <type>
+                <UDINT/>
+              </type>
+            </variable>
+            <variable name="MA_Max_Pointer_Num">
+              <type>
+                <UINT/>
+              </type>
+            </variable>
+            <variable name="MA_Pointer_Address">
+              <type>
+                <array>
+                  <dimension lower="0" upper="99"/>
+                  <baseType>
+                    <UINT/>
+                  </baseType>
+                </array>
+              </type>
+            </variable>
+            <variable name="MA_Pointer_Min">
+              <type>
+                <array>
+                  <dimension lower="0" upper="99"/>
+                  <baseType>
+                    <UINT/>
+                  </baseType>
+                </array>
+              </type>
+            </variable>
+            <variable name="MA_Pointer_Max">
+              <type>
+                <array>
+                  <dimension lower="0" upper="99"/>
+                  <baseType>
+                    <UINT/>
+                  </baseType>
+                </array>
+              </type>
+            </variable>
+          </inputVars>
+          <outputVars>
+            <variable name="DM15_Send_Data">
+              <type>
+                <array>
+                  <dimension lower="0" upper="7"/>
+                  <baseType>
+                    <BYTE/>
+                  </baseType>
+                </array>
+              </type>
+            </variable>
+            <variable name="DM15_Send_Req">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="DM16_Send_Data">
+              <type>
+                <array>
+                  <dimension lower="0" upper="1784"/>
+                  <baseType>
+                    <BYTE/>
+                  </baseType>
+                </array>
+              </type>
+            </variable>
+            <variable name="DM16_Send_Req">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="DM16_Send_Num">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="DM16_Send_Pri">
+              <type>
+                <BYTE/>
+              </type>
+            </variable>
+            <variable name="MA_STATE">
+              <type>
+                <UDINT/>
+              </type>
+            </variable>
+            <variable name="MA_ID">
+              <type>
+                <UDINT/>
+              </type>
+            </variable>
+            <variable name="MA_Data">
+              <type>
+                <UDINT/>
+              </type>
+            </variable>
+            <variable name="MA_Write_Req">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="MA_Seed_C">
+              <type>
+                <UDINT/>
+              </type>
+            </variable>
+            <variable name="RET">
+              <type>
+                <DINT/>
+              </type>
+            </variable>
+            <variable name="ROOP">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="INI">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+          </outputVars>
+        </interface>
+        <body>
+          <C>
+            <code xmlns="http://www.w3.org/1999/xhtml">//Write the C Code function body here.
+//You have access to everything defined in any of the available header files listed under the PLC Units node in the Project Manager
+/*
+Write state   0-1-2-3-6
+Read state    0-1-4-5-6
+
+case 0://Waiting MA request
+case 1://Waiting key
+case 2://Waiting data
+case 3://Verify on write
+case 4://Reading data
+case 5://Sending data
+case 6://Waiting for next MA request or completed
+*/
+
+*DM15_Send_Req = OFF;
+int ret;
+int i;
+unsigned int* write_data;
+int raw_data;
+int prc_data;
+DM14_MSG dm14msg;
+DM15_MSG dm15msg;
+DM16_MSG dm16msg;
+A_POINTER a_pointer;
+
+unsigned char cnf_data_array[DATA_SIZE];
+MA_Key = MA_Key_C;
+
+//Initialize
+if(*INI == OFF)
+{
+  if(MA_Max_Pointer_Num == 0)
+    {
+      MA_Max_Pointer_Num = 1;
+    }
+  a_pointer.Max_num = MA_Max_Pointer_Num;
+  a_pointer.Max_id = MA_Max_Pointer_Num*4-3;
+  for(i = 0; i &lt; MA_Max_Pointer_Num; i++)
+    {
+    a_pointer.Address[i] =  MA_Pointer_Address[i];
+    a_pointer.Max[i] = MA_Pointer_Max[i];
+    a_pointer.Min[i] = MA_Pointer_Min[i];
+    }
+  *INI = ON;
+}
+
+switch (MA_State)
+{
+  case 0://Waiting MA request
+    if(DM14_Recv_Update == ON)
+    {
+      DM14_Recv_Data_Analyze((unsigned char*)DM14_Recv_Data, &amp;dm14msg);
+      ret = Error_Check_State0(&amp;dm14msg,&amp;a_pointer);
+      if(ret == 0)//No error
+      {
+        //Send data set
+        dm15msg.Num_Allow = MA_Num;
+        dm15msg.Status = PROCEED;//Proceed
+        dm15msg.EDC_Para = 0x000000;
+        dm15msg.EDCP_Ext = 0x06;
+        dm15msg.Seed = Seed_Make(MA_Loop_Cnt);
+
+        //Set seed
+        MA_Seed = dm15msg.Seed;
+        
+        //Send data make and send req ON
+        DM15_Send_Data_Make((unsigned char*)DM15_Send_Data, &amp;dm15msg);
+        *DM15_Send_Req = ON;
+        
+        //Change state
+        MA_State = 1;
+      }
+      else//Error
+      {
+        //Send data set
+        dm15msg.Num_Allow = 0;
+        dm15msg.Status = BUSY;//Busy
+        dm15msg.EDC_Para = ret;
+        dm15msg.EDCP_Ext = 0x06;
+        dm15msg.Seed = 0xFFFF;
+ 
+        //Send data make and send req ON
+        DM15_Send_Data_Make((unsigned char*)DM15_Send_Data, &amp;dm15msg);
+        *DM15_Send_Req = ON;
+      }
+    }
+    break;
+  case 1://Waiting key
+    if(DM14_Recv_Update == ON)
+    {
+      DM14_Recv_Data_Analyze((unsigned char*)DM14_Recv_Data, &amp;dm14msg);
+      if(dm14msg.Key == 0)//New request
+      {
+        //Send data set
+        dm15msg.Num_Allow = 0;
+        dm15msg.Status = BUSY;//Busy
+        dm15msg.EDC_Para = 0x000012;
+        dm15msg.EDCP_Ext = 0x06;
+        dm15msg.Seed = 0xFFFF;
+
+        //Send data make and send req ON
+        DM15_Send_Data_Make((unsigned char*)DM15_Send_Data, &amp;dm15msg);
+        *DM15_Send_Req = ON;
+
+        break;
+      }
+      ret = Error_Check_State1(&amp;dm14msg);
+      if(ret == 0)//No error
+      {
+        //Send data set
+        dm15msg.Num_Allow = MA_Num;
+        dm15msg.Status = PROCEED;//Proceed
+        dm15msg.EDC_Para = 0x000000;
+        dm15msg.EDCP_Ext = 0x06;
+        dm15msg.Seed = 0xFFFF;
+
+        //Send data make and send req ON
+        DM15_Send_Data_Make((unsigned char*)DM15_Send_Data, &amp;dm15msg);
+        *DM15_Send_Req = ON;
+
+        if(MA_Cmd == WRITE_REQ)
+        {
+          //Change state
+          MA_State = 2;
+        }
+        else if(MA_Cmd == READ_REQ)
+        {
+          //Read state
+          MA_State = 4;
+        }
+
+        //Clear timer
+        MA_Wait_Key_Timer = 0;
+      }
+      else//Error
+      {
+        //Send data set
+        dm15msg.Num_Allow = 0;
+        dm15msg.Status = BUSY;//Busy
+        dm15msg.EDC_Para = ret;
+        dm15msg.EDCP_Ext = 0x06;
+        dm15msg.Seed = 0xFFFF;
+
+        //Send data make and send req ON
+        DM15_Send_Data_Make((unsigned char*)DM15_Send_Data, &amp;dm15msg);
+        *DM15_Send_Req = ON;
+
+        //Clear key
+        MA_Key = 0;
+
+        //Change state
+        MA_State = 0;
+
+        //Clear timer
+        MA_Wait_Key_Timer = 0;
+      }
+    }
+    else
+    {
+      if(MA_Wait_Key_Timer &gt;= (WAIT_KEY_TIME_OUT / MA_Exce_Time))
+      {
+        //Send data set
+        dm15msg.Num_Allow = 0;
+        dm15msg.Status = BUSY;//Busy
+        dm15msg.EDC_Para = 0x010002;
+        dm15msg.EDCP_Ext = 0x06;
+        dm15msg.Seed = 0xFFFF;
+        
+        //Send data make and send req ON
+        DM15_Send_Data_Make((unsigned char*)DM15_Send_Data, &amp;dm15msg);
+        *DM15_Send_Req = ON;
+        
+        //Clear key
+        MA_Key = 0;
+        
+        //Change state
+        MA_State = 0;
+        
+        //Clear timer
+        MA_Wait_Key_Timer = 0;
+      }
+      else
+      {
+        //Count timer      
+        MA_Wait_Key_Timer++;
+      }
+    }
+    break;
+   case 2://Waiting data
+    if(DM14_Recv_Update == ON)
+    {
+      DM14_Recv_Data_Analyze((unsigned char*)DM14_Recv_Data, &amp;dm14msg);
+      if(dm14msg.Key == 0)//New request
+      {
+        //Send data set
+        dm15msg.Num_Allow = 0;
+        dm15msg.Status = BUSY;//Busy
+        dm15msg.EDC_Para = 0x000012;
+        dm15msg.EDCP_Ext = 0x06;
+        dm15msg.Seed = 0xFFFF;
+
+        //Send data make and send req ON
+        DM15_Send_Data_Make((unsigned char*)DM15_Send_Data, &amp;dm15msg);
+        *DM15_Send_Req = ON;
+
+        break;
+      }
+    }
+    if(DM16_Recv_Update == ON)
+    {
+      if(DM16_Recv_Update_Multi == ON)
+      {
+        DM16_Recv_Data_Analyze((unsigned char*)DM16_Recv_Data_Multi, &amp;dm16msg);
+        MA_Write_Data = array2data(MA_Num,dm16msg.Bin_Data);
+      }
+      else
+      {
+        DM16_Recv_Data_Analyze((unsigned char*)DM16_Recv_Data, &amp;dm16msg);
+        raw_data = array2data(MA_Num,dm16msg.Bin_Data);
+        MA_Write_Data = decrypt(raw_data);        
+      }
+      ret = Error_Check_State2(&amp;dm16msg);
+      if(ret == 0)
+      {
+        //Set write ID
+        *MA_ID = MA_Add;
+        //Set write data
+        *MA_Data = (unsigned int)MA_Write_Data;
+        //Update req ON        
+        *MA_Write_Req = ON;
+        //Change state
+        MA_State = 3;        
+      }
+      else
+      {
+        //Send data set
+        dm15msg.Num_Allow = 0;
+        dm15msg.Status = OPE_FAIL;//Operation Failed
+        dm15msg.EDC_Para = ret;
+        dm15msg.EDCP_Ext = 0x06;
+        dm15msg.Seed = 0xFFFF;
+ 
+        //Send data make and send req ON
+        DM15_Send_Data_Make((unsigned char*)DM15_Send_Data, &amp;dm15msg);
+        *DM15_Send_Req = ON;
+        
+        //Clear key
+        MA_Key = 0;
+        
+        //Change state
+        MA_State = 0;
+        
+        //Clear timer
+        MA_Wait_Data_Timer = 0;;
+      }
+      //Clear Timer
+      MA_Wait_Data_Timer = 0;
+    }
+    else
+    {
+      if(MA_Wait_Data_Timer &gt;= (WAIT_DATA_TIME_OUT / MA_Exce_Time))
+      {
+        //Send data set
+        dm15msg.Num_Allow = 0;
+        dm15msg.Status = OPE_FAIL;//Operation Failed
+        dm15msg.EDC_Para = 0x010003;
+        dm15msg.EDCP_Ext = 0x06;
+        dm15msg.Seed = 0xFFFF;
+        
+        //Send data make and send req ON
+        DM15_Send_Data_Make((unsigned char*)DM15_Send_Data, &amp;dm15msg);
+        *DM15_Send_Req = ON;
+        
+        //Clear key
+        MA_Key = 0;
+        
+        //Change state
+        MA_State = 0;
+        
+        //Clear timer
+        MA_Wait_Data_Timer = 0;;
+      }
+      else
+      {
+        //Count Timer
+        MA_Wait_Data_Timer++;
+      }    
+    }
+    break;
+  case 3://Verify on write
+    if(DM14_Recv_Update == ON)
+    {
+      DM14_Recv_Data_Analyze((unsigned char*)DM14_Recv_Data, &amp;dm14msg);
+      if(dm14msg.Key == 0)//New request
+      {
+        //Send data set
+        dm15msg.Num_Allow = 0;
+        dm15msg.Status = BUSY;//Busy
+        dm15msg.EDC_Para = 0x000012;
+        dm15msg.EDCP_Ext = 0x06;
+        dm15msg.Seed = 0xFFFF;
+
+        //Send data make and send req ON
+        DM15_Send_Data_Make((unsigned char*)DM15_Send_Data, &amp;dm15msg);
+        *DM15_Send_Req = ON;
+
+        break;
+      }
+    }
+    write_data = &amp;MA_Cnf_Data;
+    ret = Error_Check_State3(write_data);
+    if(ret == 0)
+    {
+      //Send data set
+      dm15msg.Num_Allow = MA_Num;
+      dm15msg.Status = OPE_COMP;//Operation complate
+      dm15msg.EDC_Para = 0x000000;
+      dm15msg.EDCP_Ext = 0x06;
+      dm15msg.Seed = 0x0000;
+
+      //Waiting completed state
+      MA_State = 6;
+    }
+    else
+    {
+      //Send data set
+      dm15msg.Num_Allow = 0;
+      dm15msg.Status = OPE_FAIL;//Operation Failed
+      dm15msg.EDC_Para = ret;
+      dm15msg.EDCP_Ext = 0x06;
+      dm15msg.Seed = 0xFFFF;
+
+      //Clear key
+      MA_Key = 0;
+        
+      //Change state
+      MA_State = 0;
+    }
+    //Send data make and send req ON
+    DM15_Send_Data_Make((unsigned char*)DM15_Send_Data, &amp;dm15msg);
+    *DM15_Send_Req = ON;
+
+    //Update req OFF
+    *MA_Write_Req = OFF;
+      
+    break;
+  case 4://Reading data
+    if(DM14_Recv_Update == ON)
+    {
+      DM14_Recv_Data_Analyze((unsigned char*)DM14_Recv_Data, &amp;dm14msg);
+      if(dm14msg.Key == 0)//New request
+      {
+        //Send data set
+        dm15msg.Num_Allow = 0;
+        dm15msg.Status = BUSY;//Busy
+        dm15msg.EDC_Para = 0x000012;
+        dm15msg.EDCP_Ext = 0x06;
+        dm15msg.Seed = 0xFFFF;
+
+        //Send data make and send req ON
+        DM15_Send_Data_Make((unsigned char*)DM15_Send_Data, &amp;dm15msg);
+        *DM15_Send_Req = ON;
+
+        break;
+      }
+    }
+    if(MA_Read_Cnt == 0)
+    {
+      MA_Read_Cnt++;
+      MA_Read_ID = MA_Add;
+      *MA_ID = MA_Read_ID;
+      break;
+    }
+    else if(MA_Read_Cnt &lt;= MA_Item_Num)
+    {
+      if(MA_Num + 1 &lt;= 8)
+      {
+        //Encrypt data when single packet        
+        prc_data = encrypt(MA_Cnf_Data);
+      }
+      else
+      {
+        //Encrypt data when multi packet        
+        prc_data = encrypt(MA_Cnf_Data);
+      //Original code //prc_data = MA_Cnf_Data;
+      }
+      
+      data2array(DATA_SIZE, prc_data, cnf_data_array);
+      
+      for(i = 0 ; i &lt; DATA_SIZE ; i++)
+      {
+        MA_Read_Data[(DATA_SIZE * MA_Read_Cnt) -3 + i] = cnf_data_array[i];
+      }
+      if(MA_Read_Cnt &lt; MA_Item_Num)
+      {
+        MA_Read_Cnt++;
+        MA_Read_ID = MA_Read_ID + DATA_SIZE;
+        *MA_ID = MA_Read_ID;
+        break;
+      }
+    }
+    
+    *DM16_Send_Num = MA_Num + 1;
+
+    if(*DM16_Send_Num &lt;= 8)
+    {
+      MA_Read_Data[0] = (unsigned char)MA_Num;
+      *DM16_Send_Pri = 6;
+    }
+    else //Multi packet
+    {
+      MA_Read_Data[0] = 0xFF;
+      *DM16_Send_Pri = 7;
+    }
+    
+    //Send data make and send req ON
+    DM16_Send_Data_Make((unsigned char*)DM16_Send_Data, *DM16_Send_Num, MA_Read_Data);
+    *DM16_Send_Req = ON;
+    
+    //Clear read counter
+    MA_Read_Cnt = 0;
+ 
+    //Change state
+    MA_State = 5;
+    break;
+
+  case 5:
+    if(DM14_Recv_Update == ON)
+    {
+      DM14_Recv_Data_Analyze((unsigned char*)DM14_Recv_Data, &amp;dm14msg);
+      if(dm14msg.Key == 0)//New request
+      {
+        //Send data set
+        dm15msg.Num_Allow = 0;
+        dm15msg.Status = BUSY;//Busy
+        dm15msg.EDC_Para = 0x000012;
+        dm15msg.EDCP_Ext = 0x06;
+        dm15msg.Seed = 0xFFFF;
+
+        //Send data make and send req ON
+        DM15_Send_Data_Make((unsigned char*)DM15_Send_Data, &amp;dm15msg);
+        *DM15_Send_Req = ON;
+
+        break;
+      }
+    }
+    if(DM16_Send_Busy == 0)
+    {
+      //Send data set
+      dm15msg.Num_Allow = MA_Num;
+      dm15msg.Status = OPE_COMP;//Operation complate
+      dm15msg.EDC_Para = 0x000000;
+      dm15msg.EDCP_Ext = 0x06;
+      dm15msg.Seed = 0x0000;
+  
+      //Send data make and send req ON
+      DM15_Send_Data_Make((unsigned char*)DM15_Send_Data, &amp;dm15msg);
+      *DM15_Send_Req = ON;
+      
+      //Waiting completed state
+      MA_State = 6;
+    }
+    break;
+  case 6://Waiting for next MA request or completed
+    if(DM14_Recv_Update == ON)
+    {
+      DM14_Recv_Data_Analyze((unsigned char*)DM14_Recv_Data, &amp;dm14msg);
+      ret = Error_Check_State4(&amp;dm14msg,&amp;a_pointer);
+      if(ret == 0)//No error
+      {
+        //Clear Timer
+        MA_Wait_Next_Req_Timer = 0;
+
+        if(MA_New_Req_Flg == ON)
+        {
+          //Send data set
+          dm15msg.Num_Allow = MA_Num;
+          dm15msg.Status = PROCEED;//Proceed
+          dm15msg.EDC_Para = 0x000000;
+          dm15msg.EDCP_Ext = 0x06;
+          dm15msg.Seed = 0xFFFF;
+  
+          //Send data make and send req ON
+          DM15_Send_Data_Make((unsigned char*)DM15_Send_Data, &amp;dm15msg);
+          *DM15_Send_Req = ON;
+      
+          if(MA_Cmd == WRITE_REQ)
+          {
+            //Change state
+            MA_State = 2;
+          }
+          else if(MA_Cmd == READ_REQ)
+          {
+            //Read state
+            MA_State = 4;
+          }
+    
+          //Clear flg
+          MA_New_Req_Flg = OFF;
+        }
+        else
+        {
+          //Clear key
+          MA_Key = 0;
+          
+          //Change state
+          MA_State = 0;
+        }
+      }
+      else//Error
+      {
+        //Send data set
+        dm15msg.Num_Allow = 0;
+        dm15msg.Status = BUSY;//Busy
+        dm15msg.EDC_Para = ret;
+        dm15msg.EDCP_Ext = 0x06;
+        dm15msg.Seed = 0xFFFF;
+ 
+        //Send data make and send req ON
+        DM15_Send_Data_Make((unsigned char*)DM15_Send_Data, &amp;dm15msg);
+        *DM15_Send_Req = ON;
+        
+        //Clear key
+        MA_Key = 0;
+
+        //Change state
+        MA_State = 0;
+      }
+    }
+    else
+    {
+      if(MA_Wait_Next_Req_Timer &gt;= (WAIT_NEXT_REQ_TIME_OUT / MA_Exce_Time))
+      {
+        //Clear key
+        MA_Key = 0;
+        
+        //Change state
+        MA_State = 0;
+        
+        //Clear Timer
+        MA_Wait_Next_Req_Timer = 0;
+      }
+      else
+      {
+        //Count Timer
+        MA_Wait_Next_Req_Timer++;
+      }    
+    }
+    break;
+  default:
+    break;
+}
+if (MA_State &gt; 0)
+{
+*ROOP = ON;
+}
+else
+{
+*ROOP = OFF;
+}
+*MA_STATE = MA_State;
+*MA_Seed_C = MA_Seed;
+*RET = ret;</code>
+          </C>
+        </body>
+        <addData>
+          <data name="InterfaceText" handleUnknown="discard">
+            <code>FUNCTION MA_FUNC : DINT
+VAR_INPUT
+  DM14_Recv_Data : ARRAY[0..7] OF BYTE;
+  DM14_Recv_Update : BOOL;
+  DM16_Recv_Data : ARRAY[0..7] OF BYTE;
+  DM16_Recv_Update : BOOL;
+  DM16_Recv_Data_Multi : ARRAY[0..99] OF BYTE;
+  DM16_Recv_Update_Multi : BOOL;
+  DM16_Send_Busy : BOOL;
+  MA_Loop_Cnt : UDINT;
+  MA_Exce_Time : UINT;
+  MA_Cnf_Data : UDINT;
+  MA_Key_C : UDINT;
+  MA_Max_Pointer_Num : UINT;
+  MA_Pointer_Address : ARRAY[0..99] OF UINT;
+  MA_Pointer_Min : ARRAY[0..99] OF UINT;
+  MA_Pointer_Max : ARRAY[0..99] OF UINT;
+END_VAR
+VAR_OUTPUT
+  DM15_Send_Data : ARRAY[0..7] OF BYTE;
+  DM15_Send_Req : BOOL;
+  DM16_Send_Data : ARRAY[0..1784] OF BYTE;
+  DM16_Send_Req : BOOL;
+  DM16_Send_Num : USINT;
+  DM16_Send_Pri : BYTE;
+  MA_STATE : UDINT;
+  MA_ID : UDINT;
+  MA_Data : UDINT;
+  MA_Write_Req : BOOL;
+  MA_Seed_C : UDINT;
+  RET : DINT;
+  ROOP : BOOL;
+  INI : BOOL;
+END_VAR</code>
+          </data>
+          <data name="notYetVerified" handleUnknown="discard">False</data>
+        </addData>
+      </pou>
+      <pou name="a" pouType="function">
+        <interface>
+          <returnType>
+            <DINT/>
+          </returnType>
+        </interface>
+        <body>
+          <C>
+            <code xmlns="http://www.w3.org/1999/xhtml">//Write the C Code function body here.
+//You have access to everything defined in any of the available header files listed under the PLC Units node in the Project Manager</code>
+          </C>
+        </body>
+        <addData>
+          <data name="InterfaceText" handleUnknown="discard">
+            <code>FUNCTION a : DINT
+
+</code>
+          </data>
+          <data name="notYetVerified" handleUnknown="discard">False</data>
+        </addData>
+      </pou>
+    </pous>
+  </types>
+  <instances>
+    <configurations/>
+  </instances>
+</project>
